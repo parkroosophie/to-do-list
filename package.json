@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/App.js",
   "scripts": {
+    "build": "webpack --colors --env=prod -p --progress",
     "test": "jest --coverage",
     "watch": "webpack-dev-server --colors --env=dev --hot --progress"
   },
