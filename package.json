@@ -1,16 +1,17 @@
 {
   "name": "react-app-starter",
   "version": "1.0.0",
-  "description": "My personal favourite set of configuration options for setting up a React app.",
+  "description": "",
   "main": "src/App.js",
   "scripts": {
+    "test": "jest --coverage",
     "watch": "webpack-dev-server --colors --env=dev --hot --progress"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/parkroolucas/react-app-starter.git"
   },
-  "author": "Lucas Chen",
+  "author": "",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -23,6 +24,9 @@
     "babel-preset-react": "~6.24.1",
     "babel-preset-stage-3": "~6.24.1",
     "css-loader": "~0.28.9",
+    "enzyme": "~3.8.0",
+    "enzyme-adapter-react-16": "~1.7.1",
+    "jest": "~23.6.0",
     "moment": "~2.23.0",
     "node-sass": "~4.9.2",
     "react": "~16.3.2",
@@ -33,5 +37,11 @@
   },
   "devDependencies": {
     "webpack-dev-server": "~2.11.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|tiff|woff|woff2|mp4|webm|av|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.scss$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
